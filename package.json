@@ -9,7 +9,7 @@
     "build": "marp && cp src/index.html public"
   },
   "marp": {
-    "inputDir": "./src/slides/",
+    "inputDir": "./contents/ja/",
     "output": "./public/slides/"
   },
   "devDependencies": {
