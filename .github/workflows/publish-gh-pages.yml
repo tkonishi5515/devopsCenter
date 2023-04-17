@@ -15,10 +15,14 @@ jobs:
         with:
           context: .github/actions/marp-custom
           push: true
-          tags: ghcr.io/${{ github.repository }}/marp-custom:${{ github.sha }}
+          tags: ${{ github.repository }}/marp-custom:${{ github.sha }}
+
+      - name: Extract repository owner
+        id: extract-owner
+        run: echo "::set-output name=repository_owner::$(echo '${{ github.repository }}' | cut -d/ -f1)"
 
       - name: Convert Markdown into HTML and PDF (ja)
-        uses: docker://ghcr.io/${{ github.repository }}/marp-custom:${{ github.sha }}
+        uses: docker://ghcr.io/${{ steps.extract-owner.outputs.repository_owner }}/marp-custom:${{ github.sha }}
         with:
           entrypoint: /usr/local/bin/marp
           args: --config-file ./contents/ja/.marprc.yml --input ./contents/ja --output ./contents/ja --allow-local-files --pdf --jpeg-quality 85 --allow-file-protocol --no-sandbox --protocol-timeout 60000
