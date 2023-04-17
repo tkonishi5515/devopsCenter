@@ -16,7 +16,7 @@ theme: freud
 
 ![Slides are here](images/qrcode.png)
 
-##### スライド:
+##### スライド:a
 
 ##### リポジトリ:
 
