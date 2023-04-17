@@ -23,12 +23,13 @@ jobs:
           tags: ${{ github.repository }}/marp-custom:${{ github.sha }}
 
       - name: Convert Markdown into HTML and PDF (ja)
-        uses: docker://ghcr.io/marp-custom:${{ github.sha }}
+        uses: docker://ghcr.io/marp-custom
         env:
           REPOSITORY_OWNER: ${{ env.REPOSITORY_OWNER }}
+          GITHUB_SHA: ${{ github.sha }}
         with:
           entrypoint: /usr/local/bin/marp
-          args: --config-file ./contents/ja/.marprc.yml --input ./contents/ja --output ./contents/ja --allow-local-files --pdf --jpeg-quality 85 --allow-file-protocol --no-sandbox --protocol-timeout 60000
+          args: --config-file ./contents/ja/.marprc.yml --input ./contents/ja --output ./contents/ja --allow-local-files --pdf --jpeg-quality 85 --allow-file-protocol --no-sandbox --protocol-timeout 60000 --image ghcr.io/${REPOSITORY_OWNER}/marp-custom:${GITHUB_SHA}
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
