@@ -6,11 +6,11 @@
   "main": "index.js",
   "scripts": {
     "dev": "marp -s",
-    "build": "marp && cp src/index.html public"
+    "build": "marp && cp contents/index.html public"
   },
   "marp": {
     "inputDir": "./contents/ja/",
-    "output": "./public/slides/"
+    "output": "./contents/ja/"
   },
   "devDependencies": {
     "@marp-team/marp-cli": "^2.0.2"
