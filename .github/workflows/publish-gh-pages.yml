@@ -17,10 +17,6 @@ jobs:
           push: true
           tags: ${{ github.repository }}/marp-custom:${{ github.sha }}
 
-      - name: Extract repository owner
-        id: extract-owner
-        run: echo "::set-output name=repository_owner::$(echo '${{ github.repository }}' | cut -d/ -f1)"
-
       - name: Convert Markdown into HTML and PDF (ja)
         uses: docker://ghcr.io/${{ github.repository }}/marp-custom:${{ github.sha }}
         with:
