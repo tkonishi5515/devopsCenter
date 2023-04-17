@@ -1,5 +1,5 @@
 ---
-title: Lightning Web Componets について
+title: DevOpsCenter について
 marp: true
 paginate: true
 theme: freud
@@ -9,16 +9,16 @@ theme: freud
 <!-- theme: gradient class: blue-->
 <!-- theme: freud class: blue-->
 
-# Lightning Web Componets について <!-- fit -->
+# DevOpsCenter について <!-- fit -->
 
 </br>
 </br>
 
 ![Slides are here](images/qrcode.png)
 
-##### スライド:https://powerninja.github.io/SSCLWC/ja/index.html
+##### スライド:
 
-##### リポジトリ:https://github.com/powerninja/SSCLWC
+##### リポジトリ:
 
 ---
 
