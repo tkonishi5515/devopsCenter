@@ -5,8 +5,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "marp --html -s",
-    "build": "marp --html && cp contents/ja/index.html public"
+    "dev": "marp -s",
+    "build": "marp && cp contents/ja/index.html"
   },
   "marp": {
     "inputDir": "./contents/ja/",
