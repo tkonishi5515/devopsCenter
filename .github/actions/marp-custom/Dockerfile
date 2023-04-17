@@ -28,6 +28,7 @@ RUN apt-get update && \
 
 WORKDIR /app
 COPY . /app
-RUN npm ci
 
-RUN npm run build
+RUN npm install && npm run build
+
+RUN npm ci
