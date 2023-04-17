@@ -13,7 +13,7 @@ jobs:
       - name: Convert Markdown into HTML and PDF (ja)
         uses: hiono/marp-cli-action@v2
         with:
-          config-file: ./contents/ja/.marprc.yml
+          config-file: ./contents/.marprc.yml
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
