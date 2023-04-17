@@ -1,15 +1,34 @@
 {
-  "name": "my-slide",
-  "version": "1.0.0",
-  "main": "index.js",
-  "author": "作者名",
-  "license": "UNLICENSED",
   "private": true,
+  "name": "tech-memo",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
   "scripts": {
-    "dev": "marp --html --server .",
-    "build": "marp --html --pdf --allow-local-files --title 'スライドのタイトル' slide.md -o ./slide.pdf"
+    "dev": "marp --html -s",
+    "build": "marp --html && cp contents/ja/index.html public"
   },
-  "dependencies": {
-    "@marp-team/marp-cli": "^0.7.0"
+  "marp": {
+    "inputDir": "./contents/ja/",
+    "output": "./contents/ja/"
+  },
+  "devDependencies": {
+    "@marp-team/marp-cli": "^2.0.2"
   }
 }
+
+// {
+//   "name": "my-slide",
+//   "version": "1.0.0",
+//   "main": "index.js",
+//   "author": "作者名",
+//   "license": "UNLICENSED",
+//   "private": true,
+//   "scripts": {
+//     "dev": "marp --html --server .",
+//     "build": "marp --html --pdf --allow-local-files --title 'スライドのタイトル' slide.md -o ./slide.pdf"
+//   },
+//   "dependencies": {
+//     "@marp-team/marp-cli": "^0.7.0"
+//   }
+// }
