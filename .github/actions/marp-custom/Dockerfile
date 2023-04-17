@@ -26,6 +26,8 @@ RUN apt-get update && \
       xkb-data \
       libxshmfence1
 
+RUN npm install -g @marp-team/marp-cli
+
 WORKDIR /app
 COPY . /app
 
