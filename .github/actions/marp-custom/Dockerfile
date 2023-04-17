@@ -1,31 +1,25 @@
-FROM marpteam/marp-cli:latest
-
-RUN mkdir -p /etc/apt/sources.list.d \
-  && echo 'deb http://deb.debian.org/debian/ stretch main' > /etc/apt/sources.list.d/stretch.list \
-  && apt-get update \
-  && apt-get install -y --no-install-recommends \
-      libx11-xcb1 \
-      libxrandr2 \
-      libxcb1 \
-      libxcomposite1 \
-      libxcursor1 \
-      libxdamage1 \
-      libxfixes3 \
-      libxi6 \
-      libxrender1 \
-      libxss1 \
-      libxtst6 \
-      libnss3 \
-      libnspr4 \
-      libatk1.0-0 \
-      libatk-bridge2.0-0 \
-      libatspi2.0-0 \
-      libgdk-pixbuf2.0-0 \
-      libgtk-3-0 \
-      libpango-1.0-0 \
-      libpangocairo-1.0-0 \
-      libxcomposite1 \
-      libxkbcommon0 \
-      libxshmfence1 \
-  && apt-get clean \
-  && rm -rf /var/lib/apt/lists/*
+RUN apk update && \
+    apk add --no-cache \
+      libx11-xcb \
+      libxrandr \
+      libxcb \
+      libxcomposite \
+      libxcursor \
+      libxdamage \
+      libxfixes \
+      libxi \
+      libxrender \
+      libxss \
+      libxtst \
+      nss \
+      nspr \
+      atk \
+      at-spi2-atk \
+      at-spi2-core \
+      gdk-pixbuf \
+      gtk+3.0 \
+      pango \
+      cairo \
+      libxcomposite \
+      xkeyboard-config \
+      libxshmfence
