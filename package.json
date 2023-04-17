@@ -6,7 +6,7 @@
   "main": "index.js",
   "scripts": {
     "dev": "marp -s",
-    "build": "marp && cp contents/index.html public"
+    "build": "marp && cp contents/ja/index.html public"
   },
   "marp": {
     "inputDir": "./contents/ja/",
