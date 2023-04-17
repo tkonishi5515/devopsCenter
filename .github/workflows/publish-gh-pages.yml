@@ -2,19 +2,33 @@ name: Publish GitHub Pages
 on:
   push:
     branches:
-      - main
+      - master
 
 jobs:
   publish:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
-      - uses: actions/setup-node@v3
+      - uses: actions/checkout@v2
+
+      - name: Extract repository owner and repository name
+        id: extract-owner
+        run: |
+          echo "::set-output name=repository_owner::$(echo '${{ github.repository }}' | cut -d/ -f1)"
+          echo "::set-output name=repository_name::$(echo '${{ github.repository }}' | cut -d/ -f2 | tr '[:upper:]' '[:lower:]')"
+
+      - name: Build and push Docker image
+        uses: docker/build-push-action@v2
         with:
-          node-version: 14
-      - run: npm ci
-      - run: npm run build
-      - uses: peaceiris/actions-gh-pages@v3
+          context: .github/actions/marp-custom
+
+          push: true
+          tags: ${{ steps.extract-owner.outputs.repository_owner }}/${{ steps.extract-owner.outputs.repository_name }}/marp-custom:${{ github.sha }}
+
+      - name: Convert Markdown into HTML and PDF (ja)
+        run: docker run --rm -v ${{ github.workspace }}/contents:/app ghcr.io/${{ steps.extract-owner.outputs.repository_owner }}/${{ steps.extract-owner.outputs.repository_name }}/marp-custom:${{ github.sha }} /usr/local/bin/marp --config-file /app/ja/.marprc.yml --input /app/ja --output /app/ja --allow-local-files --pdf --jpeg-quality 85 --allow-file-protocol --no-sandbox --protocol-timeout 60000
+
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v3
         with:
-          deploy_key: ${{ secrets.ACTIONS_DEPLOY_KEY }}
+          github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./contents
