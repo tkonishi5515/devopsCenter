@@ -1,4 +1,4 @@
-name: Publish example slides to GitHub Pages
+name: Publish GitHub Pages
 on:
   push:
     branches:
@@ -8,12 +8,20 @@ jobs:
   publish:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v2
 
-      - name: Convert Markdown into HTML and PDF
-        uses: ./
+      - name: Build and push Docker image
+        uses: docker/build-push-action@v2
         with:
-          config-file: ./contents/ja/.marprc.yml
+          context: .github/actions/marp-custom
+          push: true
+          tags: ${{ github.repository_owner }}/marp-custom:${{ github.sha }}
+
+      - name: Convert Markdown into HTML and PDF (ja)
+        uses: docker://ghcr.io/${{ github.repository_owner }}/marp-custom:${{ github.sha }}
+        with:
+          entrypoint: /usr/local/bin/marp
+          args: --config-file ./contents/ja/.marprc.yml --input ./contents/ja --output ./contents/ja --allow-local-files --pdf --jpeg-quality 85 --allow-file-protocol --no-sandbox --protocol-timeout 60000
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
