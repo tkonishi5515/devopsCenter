@@ -32,5 +32,3 @@ WORKDIR /app
 COPY . /app
 
 RUN npm install && npm run build
-
-marp --pdf index.md --html --allow-local-files --image-scale 2
