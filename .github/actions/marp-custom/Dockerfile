@@ -1,7 +1,8 @@
 FROM marpteam/marp-cli:latest
 
 # Install Puppeteer dependencies
-RUN apt-get update \
+RUN echo 'deb http://deb.debian.org/debian/ stretch main' > /etc/apt/sources.list.d/stretch.list \
+ && apt-get update \
  && apt-get install -y --no-install-recommends \
       libx11-xcb1 \
       libxrandr2 \
