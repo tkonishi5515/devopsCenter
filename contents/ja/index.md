@@ -45,16 +45,11 @@ theme: freud
 
 ---
 
-# Salesforce における画面開発の歴史
+# DevOps Center とは
 
-- Visualforce
-  - Summer '08 くらい？
-- Lightning Aura Components
-  - Aura と記載される
-  - 2014 くらい？
-- Lightning Web Components
-  - LWC と記載される
-  - Summmer '19
+- [トレイル](https://trailhead.salesforce.com/ja/content/learn/modules/devops-center-quick-look/say-hello-to-devops-center?trailmix_creator_id=jimsharp&trailmix_slug=learn-dev-ops-center)に簡単に記載されている
+- 恐ろしいことに「変更セットが気に入っている場合は、心配しないでください。現時点では廃止されません。」と記載されています。
+  - 将来的に変更セットを廃止する？
 
 ---
 
