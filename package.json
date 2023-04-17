@@ -16,19 +16,3 @@
     "@marp-team/marp-cli": "^2.0.2"
   }
 }
-
-// {
-//   "name": "my-slide",
-//   "version": "1.0.0",
-//   "main": "index.js",
-//   "author": "作者名",
-//   "license": "UNLICENSED",
-//   "private": true,
-//   "scripts": {
-//     "dev": "marp --html --server .",
-//     "build": "marp --html --pdf --allow-local-files --title 'スライドのタイトル' slide.md -o ./slide.pdf"
-//   },
-//   "dependencies": {
-//     "@marp-team/marp-cli": "^0.7.0"
-//   }
-// }
