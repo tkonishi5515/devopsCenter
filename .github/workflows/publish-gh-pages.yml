@@ -29,7 +29,8 @@ jobs:
           context: .
           file: .github/actions/marp-custom/Dockerfile
           push: true
-          tags: ${{ steps.extract-owner.outputs.repository_owner }}/${{ steps.extract-owner.outputs.repository_name }}/marp-custom:${{ github.sha }}
+          # tags: ${{ steps.extract-owner.outputs.repository_owner }}/${{ steps.extract-owner.outputs.repository_name }}/marp-custom:${{ github.sha }}
+          tags: ghcr.io/${{ steps.extract-owner.outputs.repository_owner }}/${{ steps.extract-owner.outputs.repository_name }}/marp-custom:${{ github.sha }}
 
       - name: Convert Markdown into HTML and PDF (ja)
         run: docker run --rm -v ${{ github.workspace }}/contents:/app ghcr.io/${{ steps.extract-owner.outputs.repository_owner }}/${{ steps.extract-owner.outputs.repository_name }}/marp-custom:${{ github.sha }} /usr/local/bin/marp --config-file /app/ja/.marprc.yml --input /app/ja --output /app/ja --allow-local-files --pdf --jpeg-quality 85 --allow-file-protocol --no-sandbox --protocol-timeout 60000
