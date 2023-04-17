@@ -19,8 +19,8 @@ jobs:
       - name: Build and push Docker image
         uses: docker/build-push-action@v2
         with:
-          context: .github/actions/marp-custom
-
+          context: .
+          file: .github/actions/marp-custom/Dockerfile
           push: true
           tags: ${{ steps.extract-owner.outputs.repository_owner }}/${{ steps.extract-owner.outputs.repository_name }}/marp-custom:${{ github.sha }}
 
