@@ -15,7 +15,7 @@ jobs:
         with:
           context: .github/actions/marp-custom
           push: true
-          tags: ${{ github.repository }}/marp-custom:${{ github.sha }}
+          tags: ghcr.io/${{ github.repository }}/marp-custom:${{ github.sha }}
 
       - name: Convert Markdown into HTML and PDF (ja)
         uses: docker://ghcr.io/${{ github.repository }}/marp-custom:${{ github.sha }}
