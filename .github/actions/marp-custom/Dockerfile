@@ -27,7 +27,7 @@ RUN apt-get update && \
       libxshmfence1
 
 WORKDIR /app
-COPY ./app
+# COPY . /app
 
 RUN npm install && npm run build
 
