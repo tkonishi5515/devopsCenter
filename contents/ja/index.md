@@ -36,10 +36,10 @@ theme: freud
 # トピックス
 
 1. DevOps とは？
-2. なぜ DevOpsCenter が必要なのか
-3. なぜ Lightning Web Components を選択するのか
-4. LWC を使用した案件紹介
-5. 作成した Lightning Web Components の紹介
+2. なぜ DevOps が必要なのか
+3. DevOpsCenter と変更セット
+4. DevOpsCenter の触り
+5. 実践
 
 ---
 
