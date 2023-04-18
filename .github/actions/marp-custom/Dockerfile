@@ -30,4 +30,4 @@ WORKDIR /app
 COPY . /app
 
 RUN npm install && npm run build
-RUN npm install @marp-team/marp-cli
+RUN npm install -g @marp-team/marp-cli
