@@ -14,7 +14,7 @@ theme: freud
 </br>
 </br>
 
-![Slides are here](images/qrcode.png)
+![Slides are here](images/QRCode.png)
 
 ##### スライド:aa
 
