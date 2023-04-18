@@ -16,9 +16,9 @@ theme: freud
 
 ![Slides are here](images/qrcode.png)
 
-##### スライド:aa
+##### スライド:https://tkonishi5515.github.io/devopsCenter/ja//index
 
-##### リポジトリ:
+##### リポジトリ:https://github.com/tkonishi5515/devopsCenter
 
 ---
 
