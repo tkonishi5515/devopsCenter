@@ -24,10 +24,9 @@ theme: freud
 
 # はじめに
 
-#### 今回の質問内容
+#### 今回の話すこと
 
-> ・ Lightning Web コンポーネント（＝ LWC？aura と web は何が違う？）
-
+- そもそも
 - Lightning Web コンポーネント = LWC です
 - Lightning Web Components の簡単な説明と Aura との比較を行います
 - 今回 Lightning Web Components の開発を行うための環境構築等の詳細な説明はしません
@@ -36,8 +35,8 @@ theme: freud
 
 # トピックス
 
-1. Salesforce における画面開発の歴史
-2. Lightning Web Components と Aura の違いは？
+1. DevOps とは？
+2. なぜ DevOpsCenter が必要なのか
 3. なぜ Lightning Web Components を選択するのか
 4. LWC を使用した案件紹介
 5. 作成した Lightning Web Components の紹介
