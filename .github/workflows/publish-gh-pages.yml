@@ -32,7 +32,7 @@ jobs:
           tags: ghcr.io/${{ steps.extract-owner.outputs.repository_owner }}/${{ steps.extract-owner.outputs.repository_name }}/marp-custom:${{ github.sha }}
 
       - name: Convert Markdown into HTML and PDF (ja)
-        run: docker run --rm -v ${{ github.workspace }}/contents:/app ghcr.io/${{ steps.extract-owner.outputs.repository_owner }}/${{ steps.extract-owner.outputs.repository_name }}/marp-custom:${{ github.sha }} marp --config-file /app/ja/.marprc.yml --input /app/ja --output /app/ja/./ --allow-local-files --allow-file-protocol --no-sandbox --protocol-timeout 60000 --html
+        run: docker run --rm -v ${{ github.workspace }}/contents:/app ghcr.io/${{ steps.extract-owner.outputs.repository_owner }}/${{ steps.extract-owner.outputs.repository_name }}/marp-custom:${{ github.sha }} marp --config-file /app/ja/.marprc.yml --input /app/ja --output /app/ja/html --allow-local-files --allow-file-protocol --no-sandbox --protocol-timeout 60000 --html
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
