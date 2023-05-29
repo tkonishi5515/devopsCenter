@@ -27,7 +27,7 @@ theme: freud
 #### 今回の話すこと
 
 - そもそも
-- Lightning Web コンポーネント = LWC です
+- DevOps は GitHub との連携機能です
 - Lightning Web Components の簡単な説明と Aura との比較を行います
 - 今回 Lightning Web Components の開発を行うための環境構築等の詳細な説明はしません
 
