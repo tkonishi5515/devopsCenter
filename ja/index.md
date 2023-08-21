@@ -16,7 +16,7 @@ theme: freud
 
 ![Slides are here](images/qrcode.png)
 
-##### スライド:https://tkonishi5515.github.io/devopsCenter/ja//index
+##### スライド:https://tkonishi5515.github.io/devopsCenter/ja/index
 
 ##### リポジトリ:https://github.com/tkonishi5515/devopsCenter
 
@@ -26,16 +26,16 @@ theme: freud
 
 #### 今回の話すこと
 
-- そもそも
-- DevOps は GitHub との連携機能です
+- そもそも DevOps とは？
+  - DevOpsCenter は GitHub との連携機能です → これはそもそもに移動？
 - Lightning Web Components の簡単な説明と Aura との比較を行います
-- 今回 Lightning Web Components の開発を行うための環境構築等の詳細な説明はしません
+- DevOpsCenter の環境構築等の詳細な説明はしません
 
 ---
 
 # トピックス
 
-1. DevOps とは？
+1. DevOpsCenter とは？
 2. なぜ DevOps が必要なのか
 3. DevOpsCenter と変更セット
 4. DevOpsCenter の触り
@@ -43,14 +43,18 @@ theme: freud
 
 ---
 
+# DevOps とは
+
+---
+
 # DevOps Center とは
 
-- [トレイル](https://trailhead.salesforce.com/ja/content/learn/modules/devops-center-quick-look/say-hello-to-devops-center?trailmix_creator_id=jimsharp&trailmix_slug=learn-dev-ops-center)に簡単に記載されている
-- 恐ろしいことに「変更セットが気に入っている場合は、心配しないでください。現時点では廃止されません。」と記載されています。
+- [Trailhead](https://trailhead.salesforce.com/ja/content/learn/modules/devops-center-quick-look/say-hello-to-devops-center?trailmix_creator_id=jimsharp&trailmix_slug=learn-dev-ops-center)に簡単に記載されている
+- 恐ろしいことに「変更セットが気に入っている場合は、心配しないでください。現時点では廃止されません。」と記載されています
 
-  - 将来的に変更セットを廃止する？
+  - 将来的に変更セットを廃止する予定？
 
-- github を
+- GitHub を
 
 ---
 
