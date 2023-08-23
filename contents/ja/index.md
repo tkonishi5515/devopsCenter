@@ -99,6 +99,14 @@ theme: freud
 
 ---
 
+# DevOpsCenter を行う際に必要なもの
+
+## ブランチ戦略とは
+
+![height:500](images/2.jpeg)
+
+---
+
 # DevOpsCenter を行う際に必要ないもの
 
 - vsCode
@@ -118,5 +126,4 @@ theme: freud
 
 # まとめ
 
-- Aura と LWC の違いはさまざまあるが、基本 LWC を使用しよう
-- 画面フローで実装可能な場合は、画面フローで実装しよう
+-
