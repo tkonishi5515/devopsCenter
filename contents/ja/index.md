@@ -102,6 +102,19 @@ theme: freud
 
 ---
 
+# DevOpsCenter でできること
+
+## ロードマップに記載されている今後追加予定の機能
+
+- 各バージョン管理システム(Bitbucket,Gitlab など)のサポート
+- 各作業管理ツール(JIRA,Agile Accelerator)との統合
+- ビルトイン CI/CD
+- ロールバック機能
+- ホットフィックス機能
+- 拡張性の向上
+
+---
+
 # DevOpsCenter と変更セット
 
 - 相違点
