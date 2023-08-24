@@ -31,11 +31,20 @@ theme: freud
 
 # トピックス
 
-1. DevOpsCenter とは？
-2. DevOpsCenter でできること
-3. DevOpsCenter と変更セット
-4. DevOpsCenter の触り
-5. 実践
+1. 現状の Salesforce のリリースとは？
+2. DevOpsCenter とは？
+3. DevOpsCenter でできること
+4. DevOpsCenter と変更セット
+5. DevOpsCenter の触り
+6. 実践
+
+---
+
+# 現状の Salesforce のリリースとは？
+
+- Salesforce の開発は下記のように、各環境間を変更セットでリリースを行うことが多い。
+
+![height:500](images/3.png)
 
 ---
 
